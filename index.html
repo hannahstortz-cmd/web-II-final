@@ -42,9 +42,7 @@
     </div>
     <div class="bakery-info">
     <h3>About Kihm's Bakery</h3>
-    <p>
-We are four homeschooled sisters who love baking. We wanted to open a bakery with a name that represents all of us, that's why we chose the name Kihm's. Each letter represents one of our names (Kayla, Isabella, Hannah, and Maya).<br /><br />We bake and attend small farmer's markets but we love to bake our items fresh for you when you order them through our website.
-</p>
+    <p>We are four homeschooled sisters who love baking. We wanted to open a bakery with a name that represents all of us, that's why we chose the name Kihm's. Each letter represents one of our names (Kayla, Isabella, Hannah, and Maya).<br /><br />We bake and attend small farmer's markets but we love to bake our items fresh for you when you order them through our website.</p>
     <a href="https://kihms-bakery.square.site/s/order" class="btn">Explore the Menu</a>
     </div>
 </section>
@@ -63,29 +61,49 @@ We are four homeschooled sisters who love baking. We wanted to open a bakery wit
 </section>
 </main>
 <footer>
-<div>
+<div class="contact-info">
     <a href="index.html"><img class="logo" src="images/logo.svg" alt="Kihm's Bakery Farmer's Market"></a>
+    <div class="social-media">
     <a href=""><img src="images/Instagram.png"></a>
     <a href=""><img src="images/Facebook.png"></a>
+    </div>
 </div>
-<div>
-    <p class="footer-titles">Market</p>
-    <a href="https://maps.app.goo.gl/MaZrQByu7mQMkynw7" target="_blank"><p>Location</p></a>
-    <a href=""><p>Parking Info</p></a>
-    <a href=""><p>Market Details</p></a>
-<p class="footer-titles">Contact</p>
-    <a href=""><p>Contact Us</p></a>
-    <a href=""><p>Email Sign Up</p></a>
+<section class="footer-links">
+<div class="dropdown">
+  <input type="checkbox" id="dropdown-market" class="dropdown-input">
+  <label for="dropdown-market" class="footer-titles">Market<img src="images/Icon_angle-down.svg" class="caret" alt=""></label>
+  <ul class="dropdown-links">
+    <li><a href="https://maps.app.goo.gl/MaZrQByu7mQMkynw7" target="_blank">Location</a></li>
+    <li><a href="">Parking Info</a></li>
+    <li><a href="">Market Details</a></li>
+  </ul>
 </div>
-<div>
-    <p class="footer-titles">Kihm's Bakery</p>
-    <a href=""><p>About Kihm's Bakery</p></a>
-    <a href="https://www.facebook.com/Kihmsbakery/"><p>Kihm's Facebook</p></a>
-    <a href="https://kihms-bakery.square.site/s/order"><p>Order from Kihm's</p></a>
-<p class="footer-titles">FAQs</p>
-    <a href=""><p>Market FAQ</p></a>
-    <a href=""><p>Vendor FAQ</p></a>
+<div class="dropdown">
+    <input type="checkbox" id="dropdown-contact" class="dropdown-input">
+  <label for="dropdown-contact" class="footer-titles">Contact<img src="images/Icon_angle-down.svg" class="caret" alt=""></label>
+  <ul class="dropdown-links">
+    <li><a href="">Contact Us</a></li>
+    <li><a href="">Email Sign up</a></li>
+  </ul>
 </div>
+<div class="dropdown">
+    <input type="checkbox" id="dropdown-kihms" class="dropdown-input">
+  <label for="dropdown-kihms" class="footer-titles">Kihm's Bakery<img src="images/Icon_angle-down.svg" class="caret" alt=""></label>
+  <ul class="dropdown-links">
+    <li><a href="">About Kihm's Bakery</a></li>
+    <li><a href="">Kihm's Facebook</a></li>
+    <li><a href="">Order from Kihm's</a></li>
+  </ul>
+</div>
+<div class="dropdown">
+    <input type="checkbox" id="dropdown-faq" class="dropdown-input">
+  <label for="dropdown-faq" class="footer-titles">FAQs<img src="images/Icon_angle-down.svg" class="caret" alt=""></label>
+  <ul class="dropdown-links">
+    <li><a href="">Market FAQ</a></li>
+    <li><a href="">Vendor FAQ</a></li>
+  </ul>
+</div>
+</section>
 </footer>
 </body>
 </html>

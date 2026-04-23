@@ -15,11 +15,13 @@
   --size-h3: 4.8rem;
   --size-bodytext: 1.6rem;
   --size-navtype: 1.8rem;
+  --size-footertitles: 2.5rem;
 
   --lineheight-h2: 115px;
   --lineheight-h3: 58.1px;
   --lineheight-bodytext: 24.2px;
-  --lineheight-navtype: 24px;
+  --lineheight-navtype: 40px;
+  --lineheight-footertitles: 30px;
 
   --size-h2-tablet: 8rem;
   
@@ -30,6 +32,7 @@
 
   --lineheight-h2-mobile: 50px;
   --lineheight-h3-mobile: 38.8px;
+  --lineheight-navtype-mobile: 50px;
 
   --fontweight-light: 300;
   --fontweight-medium: 500;
@@ -42,7 +45,7 @@
   --bar-height: 4px;
   --hamburger-gap: 10px;
   --hamburger-margin: 5px;
-  --animation-timing: 200ms ease-in-out;
+  --animation-timing: 500ms ease-in-out;
   --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
 
@@ -85,7 +88,7 @@ nav {
 .hamburger-menu input {
     appearance: none;
 }
-nav img {
+.logo {
     width: 30rem;
 }
 nav a:hover {
@@ -115,6 +118,7 @@ h3 {
     font-size: var(--size-h3);
     line-height: var(--lineheight-h3);
     font-weight: var(--fontweight-black);
+    margin-bottom: 2.7rem;
 }
 #hero p {  
     font-size: 3rem;
@@ -143,9 +147,6 @@ h3 {
     color: var(--color-tan);
     text-align: center;
     padding: 8.7rem 0;
-}
-#info h3 {
-    margin-bottom: 2.2rem;
 }
 #info p {
     font-size: 2rem;
@@ -188,6 +189,87 @@ h3 {
     background-color: var(--color-darkbrown);
     color: var(--color-tan);
 }
+#featured-vendors {
+    color: var(--color-darkbrown);
+    text-align: center;
+    padding: 8.7rem 8.8rem;
+}
+ #featured-vendors ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 5.2rem;
+    gap: 3rem;
+}
+#featured-vendors img {
+    width: 100%;
+}
+#featured-vendors .btn {
+    background-color: var(--color-green);
+    color: var(--color-darkbrown);
+}
+#featured-vendors .btn:hover {
+    background-color: var(--color-darkgreen);
+    color: var(--color-tan);
+}
+#vendor-sign-up {
+    background-color: var(--color-darkbrown);
+    color: var(--color-tan);
+    text-align: center;
+    padding: 8.7rem 0;
+}
+#vendor-sign-up .btn {
+    background-color: var(--color-tan);
+    color: var(--color-darkbrown);
+}
+#vendor-sign-up .btn:hover {
+    background-color: var(--color-green);
+    color: var(--color-darkbrown);
+}
+footer {
+margin: 8.7rem 5.3rem;
+}
+.contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.social-media img {
+    width: 4.4rem;
+}
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5.5rem;
+    width: 75%;
+}
+.footer-titles {
+    font-family: var(--font-inter);
+    font-size: var(--size-footertitles);
+    line-height: var(--lineheight-footertitles);
+    font-weight: var(--fontweight-light);
+    text-transform: uppercase;
+    color: var(--color-brown);
+}
+.dropdown-links a {
+    color: var(--color-darkbrown);
+    font-size: var(--size-navtype);
+    line-height: var(--lineheight-navtype);
+    font-weight: var(--fontweight-semibold);
+}   
+.footer-links a:hover {
+    color: var(--color-brown);
+}
+.dropdown-input { 
+    display: none;
+}
+.caret {
+    display: none;
+}
 
 @media (max-width:1330px) {
     nav {
@@ -196,7 +278,7 @@ h3 {
     .nav-links {
         width: 65%;
     }
-    nav img {
+    .logo {
         width: 25rem;
     }
     #hero {
@@ -215,13 +297,19 @@ h3 {
     #kihms-bakery {
         padding: 8.7rem 4rem;
 }
+footer {
+    margin: 3.2rem 4rem;
+}
+.footer-links {
+    width: 100%;
+}
 }
 
 @media (max-width:970px) {
     #kihms-bakery {
         grid-template-columns: 1fr;
     }
-    nav img {
+    .logo {
         width: 20rem;
     }
     nav {
@@ -342,4 +430,45 @@ h3 {
     .active {
         border: none;
     }
+    #featured-vendors ul {
+        grid-template-columns: 1fr;
+    }
+    #featured-vendors {
+        padding: 5rem 4.9rem;
+    }
+    footer {
+        margin: 4rem 3rem;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 2rem
+    }
+.dropdown-links {
+  display: none;
+  position: absolute;
+  background-color: var(--color-tan);
+  padding: 3rem 3rem 0 3rem;
+  position: static;
+}
+.dropdown-input:checked ~ .dropdown-links {
+  display: block;
+}
+.dropdown-input:checked + .footer-titles {
+  border-bottom: 2px solid #d9d9d9;
+}
+.caret {
+    display: block;
+    transition: var(--animation-timing);
+}
+.footer-titles {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+.dropdown-links a {
+    line-height: var(--lineheight-navtype-mobile)
+}
+.dropdown-input:checked + .footer-titles .caret {
+    transform: rotate(180deg);
+}
 }
