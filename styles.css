@@ -412,7 +412,7 @@ footer {
     top: 0;
     right: 0;
     width: 100vw;           
-    height: 100vh;          
+    height: 100dvh;          
     
     translate: 100%;        
     transition: translate var(--animation-timing);
